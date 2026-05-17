@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franklin Balladares | Senior Software Developer & AI Systems Architect Portfolio</title>
+    
+    <!-- Meta Descriptions (SEO-optimized) -->
+    <meta name="description" content="Franklin Balladares - Senior Software Developer, DB Specialist and Systems Architect with 17+ years of experience. Designing robust enterprise software and dynamic database engines.">
+    <meta name="keywords" content="Franklin Balladares, Software Developer Senior, Systems Architect, Enterprise Developer, Java Developer, DBA PostgreSQL, SQL Server Specialist, Managua, Nicaragua, Portfolio">
+    <meta name="author" content="Franklin Balladares">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph for Social Networking shares -->
+    <meta property="og:title" content="Franklin Balladares | Senior Software Developer Portfolio">
+    <meta property="og:description" content="Franklin Balladares - Senior Software Developer and Enterprise Architect. Check out my timeline, specialized stack, and dynamic capabilities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://micvfranklin.netlify.app">
+    
+    <!-- CSS Stylesheet Link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="lang-es">
+
+    <!-- ==========================================================================
+         0. INTRO HARDWARE PRELOADER
+         ========================================================================== -->
+    <div class="preloader-hud" id="preloader">
+        <div class="preloader-hud-visual">
+            <div class="preloader-hud-logo">
+                F.<span>BALLADARES</span>
+            </div>
+            <div class="preloader-hud-track">
+                <div class="preloader-hud-bar"></div>
+            </div>
+            <span class="preloader-hud-status" id="preloader-status">Initializing neural models...</span>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         BACKGROUND LAYER (Interactive Particle Canvas & Ambient Lights)
+         ========================================================================== -->
+    <canvas id="neural-canvas"></canvas>
+    <div class="cursor-glow" id="cursor-follower"></div>
+    <div class="aurora-container">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+        <div class="aurora-blob blob-3"></div>
+    </div>
+
+    <!-- ==========================================================================
+         1. FLOATING CAPSULE NAVIGATION HEADER
+         ========================================================================== -->
+    <div class="navbar-wrapper">
+        <header class="navbar">
+            
+            <a href="#hero" class="logo">
+                F.<span>BALLADARES</span>
+            </a>
+
+            <!-- Navigation Links (Bilingual sibling spans) -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">
+                    <span class="lang-es">Sobre Mí</span>
+                    <span class="lang-en">About Me</span>
+                </a>
+                <a href="#experience" class="nav-link">
+                    <span class="lang-es">Trayectoria</span>
+                    <span class="lang-en">Experience</span>
+                </a>
+                <a href="#stack" class="nav-link">
+                    <span class="lang-es">Tecnologías</span>
+                    <span class="lang-en">Stack</span>
+                </a>
+                <a href="#education" class="nav-link">
+                    <span class="lang-es">Formación</span>
+                    <span class="lang-en">Education</span>
+                </a>
+                <a href="#certs" class="nav-link">
+                    <span class="lang-es">Acreditaciones</span>
+                    <span class="lang-en">Credentials</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <span class="lang-es">Contacto</span>
+                    <span class="lang-en">Contact</span>
+                </a>
+            </nav>
+
+            <!-- Action cluster: Language capsule switch + mobile hamburger -->
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                
+                <!-- Dynamic Capsule Bilingual Language Switch -->
+                <div class="lang-switch-capsule" id="lang-switch" aria-label="Toggle language">
+                    <span class="lang-switch-label label-es">ES</span>
+                    <span class="lang-switch-slider"></span>
+                    <span class="lang-switch-label label-en">EN</span>
+                </div>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Visual scroll progress indicator -->
+            <div class="scroll-progress-bar" id="scroll-progress"></div>
+        </header>
+    </div>
+
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-sec" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                
+                <!-- Hero Info Column -->
+                <div class="hero-info">
+                    <div class="hero-badge">
+                        <span class="lang-es">Sistema Activo &bull; Despliegue Premium</span>
+                        <span class="lang-en">Active System &bull; Premium Deployment</span>
+                    </div>
+                    
+                    <h1 class="hero-title">Franklin Balladares</h1>
+                    
+                    <!-- Dynamic Typing Target -->
+                    <div class="hero-subtitle">
+                        <span id="typed-target"></span>
+                    </div>
+                    
+                    <p class="hero-desc">
+                        <span class="lang-es">Licenciado en Ciencias de la Computación. Más de 17 años liderando la arquitectura de software empresarial, optimización avanzada de motores de bases de datos relacionales y el despliegue de sistemas distribuidos y APIs de alta disponibilidad.</span>
+                        <span class="lang-en">B.S. in Computer Science. More than 17 years leading enterprise software architecture, advanced relational database optimization, and the deployment of distributed systems & high-availability APIs.</span>
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="https://micvfranklin.netlify.app/Curriculum_Franklin_Alberto.pdf" target="_blank" class="btn btn-primary" download="Curriculum_Franklin_Balladares.pdf">
+                            <span class="lang-es">Descargar CV</span>
+                            <span class="lang-en">Download Resume</span>
+                            <i data-lucide="download" class="btn-icon"></i>
+                        </a>
+                        <a href="#experience" class="btn btn-secondary">
+                            <span class="lang-es">Ver Trayectoria</span>
+                            <span class="lang-en">View Experience</span>
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Column (Terminal card HUD + Floating Stats) -->
+                <div class="hero-visual">
+                    <div class="hero-glow-back"></div>
+                    
+                    <div class="terminal-card">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="terminal-dot dot-red"></span>
+                                <span class="terminal-dot dot-yellow"></span>
+                                <span class="terminal-dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">bash - systems_architect.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span><span class="terminal-content">init --profile="Franklin Balladares"</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-output">Loading Computer Science Core Mod... [OK]</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-output">Configuring Database Tuning Engine... [OK]</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-output">Injecting Distributed Microservices... [OK]</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span><span class="terminal-content">cat capabilities.json</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-output">{<br>
+                                &nbsp;&nbsp;"experience_years": 17,<br>
+                                &nbsp;&nbsp;"primary_stack": ["Java", "Spring Boot", "PL/SQL", "Postgres"],<br>
+                                &nbsp;&nbsp;"core_focus": "Enterprise High-Performance Architecture",<br>
+                                &nbsp;&nbsp;"status": "Ready for high-availability challenges"<br>
+                                }</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span><span class="terminal-content">systemctl status f_balladares.service</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-output" style="color:var(--accent-green);">&bull; f_balladares.service - Franklin Balladares Active (Running)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Levitating Cyber Stats badges -->
+                    <div class="stats-grid">
+                        <div class="stat-badge stat-badge-1" data-tilt data-tilt-max="15">
+                            <span class="stat-number">17+</span>
+                            <span class="stat-label">
+                                <span class="lang-es">Años de Exp.</span>
+                                <span class="lang-en">Yrs Experience</span>
+                            </span>
+                        </div>
+                        
+                        <div class="stat-badge stat-badge-2" data-tilt data-tilt-max="15">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">
+                                <span class="lang-es">Uptime SLA</span>
+                                <span class="lang-en">Uptime SLA</span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. SOBRE MÍ / ABOUT ME
+         ========================================================================== -->
+    <section class="about-sec" id="about">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag">
+                    <span class="lang-es">Ficha Técnica</span>
+                    <span class="lang-en">Technical Core</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-es">Sobre Mí</span>
+                    <span class="lang-en">About Me</span>
+                </h2>
+            </div>
+
+            <div class="about-grid">
+                
+                <!-- Profile Left card -->
+                <div class="about-visual">
+                    <div class="profile-glow"></div>
+                    <div class="profile-card glow-border-accent" data-tilt data-tilt-max="8">
+                        <div class="profile-hud-avatar">
+                            
+                            <!-- Premium Inline SVG cyber hologram representation -->
+                            <svg class="profile-svg-hud" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke-dasharray="3 3"/>
+                                <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(124, 0, 255, 0.25)"/>
+                                <path d="M 50,15 L 50,85 M 15,50 L 85,50" stroke-dasharray="2 2" stroke="rgba(0, 242, 254, 0.4)"/>
+                                <!-- Cyber hexagon grids -->
+                                <polygon points="50,22 74,36 74,64 50,78 26,64 26,36" fill="none" stroke-width="0.5"/>
+                                <polygon points="50,28 69,39 69,61 50,72 31,61 31,39" fill="none" stroke-width="0.5" stroke="rgba(124, 0, 255, 0.5)"/>
+                                <!-- Core active processor -->
+                                <rect x="44" y="44" width="12" height="12" rx="2" fill="none" stroke-width="1.2"/>
+                                <circle cx="50" cy="50" r="2" fill="var(--accent-green)"/>
+                                <!-- Data node signals -->
+                                <circle cx="50" cy="22" r="2.5" fill="var(--accent-cyan)"/>
+                                <circle cx="74" cy="36" r="2" fill="var(--accent-purple)"/>
+                                <circle cx="74" cy="64" r="2" fill="var(--accent-cyan)"/>
+                                <circle cx="26" cy="64" r="2" fill="var(--accent-purple)"/>
+                                <circle cx="26" cy="36" r="2" fill="var(--accent-cyan)"/>
+                            </svg>
+
+                            <div class="profile-hud-badge">
+                                <span class="lang-es">SISTEMA ACTIVO</span>
+                                <span class="lang-en">SYSTEM ACTIVE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text right specs details -->
+                <div class="about-details">
+                    <h3>
+                        <span class="lang-es">Arquitectura Robusta y Bases de Datos a Escala</span>
+                        <span class="lang-en">Robust Architecture and Scaled Databases</span>
+                    </h3>
+                    
+                    <p class="about-desc-text">
+                        <span class="lang-es">Soy Licenciado en Ciencias de la Computación egresado de la UNAN Managua. Con más de 17 años de sólida experiencia empresarial, he diseñado y liderado la integración de sistemas financieros distribuidos, facturación electrónica a nivel país, y optimización avanzada de consultas transaccionales de alto rendimiento. Mi filosofía de desarrollo une la rigurosidad científica de la computación clásica con las prácticas ágiles de ingeniería de software moderno e inteligencia artificial.</span>
+                        <span class="lang-en">I hold a B.S. in Computer Science from UNAN Managua. With more than 17 years of robust corporate experience, I have designed and led the integration of distributed financial systems, country-level electronic billing, and advanced optimization of high-performance transactional queries. My engineering philosophy combines the scientific rigor of classical computer science with the agile practices of modern software engineering and artificial intelligence.</span>
+                    </p>
+
+                    <!-- Quadrant Core Disciplines -->
+                    <div class="spec-grid">
+                        
+                        <div class="spec-card">
+                            <div class="spec-icon-wrapper"><i data-lucide="server"></i></div>
+                            <h4 class="spec-title">
+                                <span class="lang-es">Ingeniería Backend</span>
+                                <span class="lang-en">Backend Engineering</span>
+                            </h4>
+                            <p class="spec-desc">
+                                <span class="lang-es">Desarrollo robusto en Java (Spring Boot, Hibernate) y PHP (Laravel) bajo patrones arquitectónicos limpios.</span>
+                                <span class="lang-en">Robust development in Java (Spring Boot, Hibernate) and PHP (Laravel) under clean architectural patterns.</span>
+                            </p>
+                        </div>
+
+                        <div class="spec-card">
+                            <div class="spec-icon-wrapper"><i data-lucide="database"></i></div>
+                            <h4 class="spec-title">
+                                <span class="lang-es">Bases de Datos & DBA</span>
+                                <span class="lang-en">Databases & DBA</span>
+                            </h4>
+                            <p class="spec-desc">
+                                <span class="lang-es">Especialista en PostgreSQL (Tuning Avanzado, replicación), Oracle PL/SQL y SQL Server corporativo.</span>
+                                <span class="lang-en">Specialist in PostgreSQL (Advanced Tuning, replication), Oracle PL/SQL, and corporate SQL Server.</span>
+                            </p>
+                        </div>
+
+                        <div class="spec-card">
+                            <div class="spec-icon-wrapper"><i data-lucide="cpu"></i></div>
+                            <h4 class="spec-title">
+                                <span class="lang-es">Arquitectura Empresarial</span>
+                                <span class="lang-en">Enterprise Architecture</span>
+                            </h4>
+                            <p class="spec-desc">
+                                <span class="lang-es">Integración estructurada de microservicios distribuidos, comunicaciones SOAP/RESTful y colas seguras.</span>
+                                <span class="lang-en">Structured integration of distributed microservices, SOAP/RESTful interfaces, and secure messaging.</span>
+                            </p>
+                        </div>
+
+                        <div class="spec-card">
+                            <div class="spec-icon-wrapper"><i data-lucide="terminal"></i></div>
+                            <h4 class="spec-title">
+                                <span class="lang-es">SysAdmin & DevOps</span>
+                                <span class="lang-en">SysAdmin & DevOps</span>
+                            </h4>
+                            <p class="spec-desc">
+                                <span class="lang-es">Administración avanzada de sistemas Linux (RedHat, CentOS) y automatizaciones de tareas con Scripting Bash.</span>
+                                <span class="lang-en">Advanced administration of Linux (RedHat, CentOS) and task automation via Bash Scripting.</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. EXPERIENCIA / EXPERIENCE TIMELINE
+         ========================================================================== -->
+    <section class="experience-sec" id="experience">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag">
+                    <span class="lang-es">Línea de Tiempo</span>
+                    <span class="lang-en">Career Path</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-es">Experiencia Profesional</span>
+                    <span class="lang-en">Work Experience</span>
+                </h2>
+            </div>
+
+            <div class="timeline-wrapper">
+                
+                <!-- Central Timeline Line Tracks -->
+                <div class="timeline-track-rail"></div>
+                <div class="timeline-progress-rail" id="timeline-progress"></div>
+
+                <!-- Job 1: TIGO -->
+                <div class="timeline-element">
+                    <span class="timeline-dot-indicator"></span>
+                    <div class="timeline-hud-card glass-card glow-border-accent">
+                        <div class="timeline-header-meta">
+                            <h3 class="timeline-entity">TIGO</h3>
+                            <span class="timeline-duration">2022 – 2023</span>
+                        </div>
+                        <span class="timeline-position">
+                            <span class="lang-es">Desarrollador de Software Senior / Consultor Backend</span>
+                            <span class="lang-en">Senior Software Developer / Backend Consultant</span>
+                        </span>
+                        
+                        <p class="timeline-details">
+                            <span class="lang-es">Lideré la ingeniería, diseño e integración de APIs de alto rendimiento para pasarelas transaccionales internas, procesamiento masivo de facturaciones y recargas móviles.</span>
+                            <span class="lang-en">Led the engineering, design, and integration of high-performance APIs for internal transactional gateways, mass billing, and mobile recharges.</span>
+                        </p>
+                        
+                        <span class="timeline-achievements-title">
+                            <span class="lang-es">LOGROS DESTACADOS</span>
+                            <span class="lang-en">KEY ACHIEVEMENTS</span>
+                        </span>
+                        <ul class="timeline-achievements-list">
+                            <li>
+                                <span class="lang-es">Diseño e implementación de microservicios escalables basados en Spring Boot encapsulados en contenedores Docker.</span>
+                                <span class="lang-en">Designed and implemented scalable microservices using Spring Boot, containerized with Docker.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Optimización avanzada de consultas complejas y optimización de procedimientos PL/SQL sobre Oracle DB corporativas, reduciendo en un 40% la latencia de procesamiento.</span>
+                                <span class="lang-en">Advanced optimization of complex queries and PL/SQL procedures on Oracle DB, reducing execution latency by 40%.</span>
+                            </li>
+                        </ul>
+
+                        <div class="timeline-skills-badge-title">Stack:</div>
+                        <div class="timeline-badges-wrap">
+                            <span class="timeline-badge">Java</span>
+                            <span class="timeline-badge">Spring Boot</span>
+                            <span class="timeline-badge">Hibernate</span>
+                            <span class="timeline-badge">Oracle PL/SQL</span>
+                            <span class="timeline-badge">Docker</span>
+                            <span class="timeline-badge">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2: BAC CREDOMATIC -->
+                <div class="timeline-element">
+                    <span class="timeline-dot-indicator"></span>
+                    <div class="timeline-hud-card glass-card glow-border-accent">
+                        <div class="timeline-header-meta">
+                            <h3 class="timeline-entity">BAC CREDOMATIC</h3>
+                            <span class="timeline-duration">2019 – 2020</span>
+                        </div>
+                        <span class="timeline-position">
+                            <span class="lang-es">Backend Developer Senior</span>
+                            <span class="lang-en">Senior Backend Developer</span>
+                        </span>
+                        
+                        <p class="timeline-details">
+                            <span class="lang-es">Desarrollé y aseguré componentes transaccionales de misión crítica en plataformas distribuidas financieras, garantizando la consistencia transaccional bancaria.</span>
+                            <span class="lang-en">Developed and secured mission-critical transactional components in distributed financial platforms, assuring transactional consistency across banking flows.</span>
+                        </p>
+                        
+                        <span class="timeline-achievements-title">
+                            <span class="lang-es">LOGROS DESTACADOS</span>
+                            <span class="lang-en">KEY ACHIEVEMENTS</span>
+                        </span>
+                        <ul class="timeline-achievements-list">
+                            <li>
+                                <span class="lang-es">Migración de flujos heredados financieros y SOAP hacia microservicios modernos REST, manteniendo un Uptime superior al 99.99%.</span>
+                                <span class="lang-en">Migrated legacy financial SOAP flows to modern REST microservices, maintaining an uptime of over 99.99%.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Integración segura de canales transaccionales para banca digital móvil y terminales web de cobro bajo normativas ágiles Scrum.</span>
+                                <span class="lang-en">Secure integration of transactional channels for mobile digital banking and web checkout portals under Scrum methodologies.</span>
+                            </li>
+                        </ul>
+
+                        <div class="timeline-skills-badge-title">Stack:</div>
+                        <div class="timeline-badges-wrap">
+                            <span class="timeline-badge">Java</span>
+                            <span class="timeline-badge">Spring Boot</span>
+                            <span class="timeline-badge">SQL Server</span>
+                            <span class="timeline-badge">Web Services</span>
+                            <span class="timeline-badge">Git / GitLab</span>
+                            <span class="timeline-badge">CI/CD Jenkins</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3: MEFCCA -->
+                <div class="timeline-element">
+                    <span class="timeline-dot-indicator"></span>
+                    <div class="timeline-hud-card glass-card glow-border-accent">
+                        <div class="timeline-header-meta">
+                            <h3 class="timeline-entity">MEFCCA</h3>
+                            <span class="timeline-duration">2020 – 2021</span>
+                        </div>
+                        <span class="timeline-position">
+                            <span class="lang-es">Especialista en Desarrollo y Bases de Datos</span>
+                            <span class="lang-en">Development & Database Specialist</span>
+                        </span>
+                        
+                        <p class="timeline-details">
+                            <span class="lang-es">Responsable del desarrollo integral de sistemas, la migración de datos relacionales y el soporte especializado a los motores SQL Server y PostgreSQL del ministerio.</span>
+                            <span class="lang-en">Responsible for full-stack systems engineering, relational database migrations, and advanced support for MEFCCA's SQL Server and PostgreSQL engines.</span>
+                        </p>
+                        
+                        <span class="timeline-achievements-title">
+                            <span class="lang-es">LOGROS DESTACADOS</span>
+                            <span class="lang-en">KEY ACHIEVEMENTS</span>
+                        </span>
+                        <ul class="timeline-achievements-list">
+                            <li>
+                                <span class="lang-es">Desarrollé el portal administrativo institucional utilizando PHP (Laravel) y JS, acelerando la reportería masiva de cara al usuario en un 50%.</span>
+                                <span class="lang-en">Developed the core institutional portal using PHP (Laravel) and JS, speeding up dynamic mass reporting workflows by 50%.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Diseñé la arquitectura y el mapeo físico/lógico para la consolidación de datos interinstitucionales en bases de datos PostgreSQL.</span>
+                                <span class="lang-en">Designed the schema architecture and logic mapping for inter-institutional data consolidation in PostgreSQL engines.</span>
+                            </li>
+                        </ul>
+
+                        <div class="timeline-skills-badge-title">Stack:</div>
+                        <div class="timeline-badges-wrap">
+                            <span class="timeline-badge">PHP</span>
+                            <span class="timeline-badge">Laravel</span>
+                            <span class="timeline-badge">PostgreSQL</span>
+                            <span class="timeline-badge">SQL Server</span>
+                            <span class="timeline-badge">JavaScript</span>
+                            <span class="timeline-badge">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 4: DGI (Facturación Electrónica) -->
+                <div class="timeline-element">
+                    <span class="timeline-dot-indicator"></span>
+                    <div class="timeline-hud-card glass-card glow-border-accent">
+                        <div class="timeline-header-meta">
+                            <h3 class="timeline-entity">DGI</h3>
+                            <span class="timeline-duration">2017 – 2018</span>
+                        </div>
+                        <span class="timeline-position">
+                            <span class="lang-es">Analista Programador Senior (Equipo Factura Electrónica)</span>
+                            <span class="lang-en">Senior Programmer Analyst (Electronic Billing Team)</span>
+                        </span>
+                        
+                        <p class="timeline-details">
+                            <span class="lang-es">Formé parte del equipo que estructuró e implementó la base transaccional e integraciones y esquemas de la Factura Electrónica masiva a nivel país.</span>
+                            <span class="lang-en">Key member of the core engineering team designing and deploying the country-level mass Electronic Invoicing transacting architecture and integration schemas.</span>
+                        </p>
+                        
+                        <span class="timeline-achievements-title">
+                            <span class="lang-es">LOGROS DESTACADOS</span>
+                            <span class="lang-en">KEY ACHIEVEMENTS</span>
+                        </span>
+                        <ul class="timeline-achievements-list">
+                            <li>
+                                <span class="lang-es">Programación de módulos validadores de alta seguridad, firma digital de facturas y pasarelas de intercambio XML seguras.</span>
+                                <span class="lang-en">Programmed high-security validation micro-modules, digital XML signature validation libraries, and secure messaging relays.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Gestión y auditoría en servidores Linux RedHat y optimización transaccional masiva sobre PostgreSQL.</span>
+                                <span class="lang-en">System management on Enterprise Linux RedHat servers and heavy load tuning on high-volume PostgreSQL databases.</span>
+                            </li>
+                        </ul>
+
+                        <div class="timeline-skills-badge-title">Stack:</div>
+                        <div class="timeline-badges-wrap">
+                            <span class="timeline-badge">Java</span>
+                            <span class="timeline-badge">Python</span>
+                            <span class="timeline-badge">PostgreSQL</span>
+                            <span class="timeline-badge">XML/Security</span>
+                            <span class="timeline-badge">Linux RedHat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 5: IPSA -->
+                <div class="timeline-element">
+                    <span class="timeline-dot-indicator"></span>
+                    <div class="timeline-hud-card glass-card glow-border-accent">
+                        <div class="timeline-header-meta">
+                            <h3 class="timeline-entity">IPSA</h3>
+                            <span class="timeline-duration">2016 – 2017</span>
+                        </div>
+                        <span class="timeline-position">
+                            <span class="lang-es">Administrador de Sistemas y Bases de Datos (DBA)</span>
+                            <span class="lang-en">Systems and Database Administrator (DBA)</span>
+                        </span>
+                        
+                        <p class="timeline-details">
+                            <span class="lang-es">Responsable del Uptime, copias de seguridad de datos masivos, automatización de infraestructura Linux y tuning de los motores relacionales institucionales.</span>
+                            <span class="lang-en">Responsible for system uptime, backup policies for enterprise datasets, Linux servers administration, and physical/logical tuning of relational DB engines.</span>
+                        </p>
+                        
+                        <span class="timeline-achievements-title">
+                            <span class="lang-es">LOGROS DESTACADOS</span>
+                            <span class="lang-en">KEY ACHIEVEMENTS</span>
+                        </span>
+                        <ul class="timeline-achievements-list">
+                            <li>
+                                <span class="lang-es">Configuración y mantenimiento de esquemas de réplica maestro-esclavo y alta disponibilidad en PostgreSQL 9.x/10.</span>
+                                <span class="lang-en">Configured master-slave streaming replication and high-availability topologies for PostgreSQL 9.x/10 clusters.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Creación de scripts de automatización en Bash y Python para auditoría de rendimiento y despliegues automáticos.</span>
+                                <span class="lang-en">Wrote Unix Bash and Python automations to audit engine workloads and orchestrate cold/hot backup transfers.</span>
+                            </li>
+                        </ul>
+
+                        <div class="timeline-skills-badge-title">Stack:</div>
+                        <div class="timeline-badges-wrap">
+                            <span class="timeline-badge">Linux Administration</span>
+                            <span class="timeline-badge">PostgreSQL DBA</span>
+                            <span class="timeline-badge">Oracle 11g/12c</span>
+                            <span class="timeline-badge">Bash Shell Scripting</span>
+                            <span class="timeline-badge">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 6: INCASPRI -->
+                <div class="timeline-element">
+                    <span class="timeline-dot-indicator"></span>
+                    <div class="timeline-hud-card glass-card glow-border-accent">
+                        <div class="timeline-header-meta">
+                            <h3 class="timeline-entity">INCASPRI</h3>
+                            <span class="timeline-duration">2014 – 2017</span>
+                        </div>
+                        <span class="timeline-position">
+                            <span class="lang-es">Consultor de Software y Arquitectura</span>
+                            <span class="lang-en">Software Consulting & Architecture</span>
+                        </span>
+                        
+                        <p class="timeline-details">
+                            <span class="lang-es">Diseñé sistemas modulares transaccionales a medida para empresas medianas y grandes, optimizando flujos contables y administrativos complejos.</span>
+                            <span class="lang-en">Designed modular bespoke transactional frameworks for mid-to-large scale companies, optimizing accounting audits and resource control flows.</span>
+                        </p>
+                        
+                        <span class="timeline-achievements-title">
+                            <span class="lang-es">LOGROS DESTACADOS</span>
+                            <span class="lang-en">KEY ACHIEVEMENTS</span>
+                        </span>
+                        <ul class="timeline-achievements-list">
+                            <li>
+                                <span class="lang-es">Desarrollé ERPs modulares administrativos basados en PHP y Postgres que aceleraron en un 35% la conciliación bancaria y el cierre mensual.</span>
+                                <span class="lang-en">Built modular PHP & PostgreSQL ERP solutions that improved month-end accounting reconciliation times by 35%.</span>
+                            </li>
+                            <li>
+                                <span class="lang-es">Implementación de redes seguras internas de conexión y aprovisionamiento inicial de servidores de producción Linux locales y remotos.</span>
+                                <span class="lang-en">Designed secure internal networking structures and provisioned local and remote Linux production servers.</span>
+                            </li>
+                        </ul>
+
+                        <div class="timeline-skills-badge-title">Stack:</div>
+                        <div class="timeline-badges-wrap">
+                            <span class="timeline-badge">PHP</span>
+                            <span class="timeline-badge">JavaScript</span>
+                            <span class="timeline-badge">PostgreSQL</span>
+                            <span class="timeline-badge">Bootstrap CSS</span>
+                            <span class="timeline-badge">Linux Servers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 7: DGI (Desarrollo Inicial) -->
+                <div class="timeline-element">
+                    <span class="timeline-dot-indicator"></span>
+                    <div class="timeline-hud-card glass-card glow-border-accent">
+                        <div class="timeline-header-meta">
+                            <h3 class="timeline-entity">DGI</h3>
+                            <span class="timeline-duration">2007 – 2010</span>
+                        </div>
+                        <span class="timeline-position">
+                            <span class="lang-es">Programador de Sistemas</span>
+                            <span class="lang-en">Systems Programmer</span>
+                        </span>
+                        
+                        <p class="timeline-details">
+                            <span class="lang-es">Fase inicial de mi carrera empresarial, a cargo de diseñar lógicas complejas tributarias y estructurar triggers de auditoría fiscal en bases de datos transaccionales masivas.</span>
+                            <span class="lang-en">Initial corporate career phase, in charge of implementing complex fiscal calculations and writing database triggers for audit logs in massive databases.</span>
+                        </p>
+
+                        <div class="timeline-skills-badge-title">Stack:</div>
+                        <div class="timeline-badges-wrap">
+                            <span class="timeline-badge">Java SE/EE</span>
+                            <span class="timeline-badge">SQL Server</span>
+                            <span class="timeline-badge">PL/SQL Triggers</span>
+                            <span class="timeline-badge">CentOS Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. AI TECH STACK
+         ========================================================================== -->
+    <section class="stack-sec" id="stack">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag">
+                    <span class="lang-es">Ingeniería de Habilidades</span>
+                    <span class="lang-en">Skills Hub</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-es">Stack Tecnológico</span>
+                    <span class="lang-en">Tech Stack</span>
+                </h2>
+            </div>
+
+            <div class="stack-tabs-wrapper">
+                
+                <!-- Tab Buttons Nav -->
+                <div class="stack-nav-tabs">
+                    <button class="stack-tab-trigger active" data-tab="backend">Backend</button>
+                    <button class="stack-tab-trigger" data-tab="databases">Databases</button>
+                    <button class="stack-tab-trigger" data-tab="cloud">Systems & OS</button>
+                    <button class="stack-tab-trigger" data-tab="frontend">Frontend & Tools</button>
+                </div>
+
+                <!-- 1. BACKEND STACK -->
+                <div class="stack-tab-grid active" id="backend">
+                    
+                    <div class="tech-hud-card glass-card" data-tilt data-tilt-max="10">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="coffee"></i></div>
+                            <h3 class="tech-hud-name">Java</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Enterprise Expert</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="tech-hud-card glass-card" data-tilt data-tilt-max="10">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="layers"></i></div>
+                            <h3 class="tech-hud-name">Spring Boot</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Senior Architect</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="92%"></div>
+                        </div>
+                    </div>
+
+                    <div class="tech-hud-card glass-card" data-tilt data-tilt-max="10">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="code-2"></i></div>
+                            <h3 class="tech-hud-name">PHP (Laravel)</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Senior Engineer</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="88%"></div>
+                        </div>
+                    </div>
+
+                    <div class="tech-hud-card glass-card" data-tilt data-tilt-max="10">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="binary"></i></div>
+                            <h3 class="tech-hud-name">Python</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Advanced Developer</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="80%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 2. DATABASES STACK -->
+                <div class="stack-tab-grid" id="databases">
+                    
+                    <div class="tech-hud-card glass-card">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="database"></i></div>
+                            <h3 class="tech-hud-name">PostgreSQL</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: DBA / Tuning Architect</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="tech-hud-card glass-card">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="hard-drive"></i></div>
+                            <h3 class="tech-hud-name">Oracle Database</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: PL/SQL Expert</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="tech-hud-card glass-card">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="server"></i></div>
+                            <h3 class="tech-hud-name">SQL Server</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Senior DBA Support</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="90%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3. CLOUD SYSTEMS STACK -->
+                <div class="stack-tab-grid" id="cloud">
+                    
+                    <div class="tech-hud-card glass-card">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="terminal"></i></div>
+                            <h3 class="tech-hud-name">Linux OS (RedHat, CentOS)</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: SysAdmin / Advanced Shelling</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="92%"></div>
+                        </div>
+                    </div>
+
+                    <div class="tech-hud-card glass-card">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="monitor"></i></div>
+                            <h3 class="tech-hud-name">Windows Server</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Advanced System Admin</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="tech-hud-card glass-card">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="box"></i></div>
+                            <h3 class="tech-hud-name">Docker Containers</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Infrastructure Deployer</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="82%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 4. FRONTEND STACK -->
+                <div class="stack-tab-grid" id="frontend">
+                    
+                    <div class="tech-hud-card glass-card">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="file-json-2"></i></div>
+                            <h3 class="tech-hud-name">JavaScript (ES6+)</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Advanced Developer</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="tech-hud-card glass-card">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="atom"></i></div>
+                            <h3 class="tech-hud-name">React / Angular</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Intermediate</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="tech-hud-card glass-card">
+                        <div class="tech-hud-header">
+                            <div class="tech-hud-icon"><i data-lucide="git-branch"></i></div>
+                            <h3 class="tech-hud-name">Git (GitHub, GitLab)</h3>
+                        </div>
+                        <div class="tech-hud-meta">
+                            <span>Level: Advanced Collaborator</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="tech-hud-bar">
+                            <div class="tech-hud-fill" data-level="90%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. AI ENGINEER SKILLS (CAPABILITIES BADGES)
+         ========================================================================== -->
+    <section class="skills-sec" id="skills">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag">
+                    <span class="lang-es">Valores Agregados</span>
+                    <span class="lang-en">Operational Strengths</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-es">Habilidades Operativas Clave</span>
+                    <span class="lang-en">Core Software Capabilities</span>
+                </h2>
+            </div>
+
+            <!-- Staggered badges cloud -->
+            <div class="capabilities-grid">
+                
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Desarrollo de software empresarial</span>
+                    <span class="lang-en">Enterprise software development</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Arquitectura backend</span>
+                    <span class="lang-en">Backend architecture</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Desarrollo web y móvil</span>
+                    <span class="lang-en">Web & mobile development</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Administración de bases de datos</span>
+                    <span class="lang-en">Database administration</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Administración de servidores Linux y Windows</span>
+                    <span class="lang-en">Linux & Windows server administration</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Integración de sistemas</span>
+                    <span class="lang-en">Systems integration</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Optimización SQL</span>
+                    <span class="lang-en">SQL optimization</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Gestión de proyectos tecnológicos</span>
+                    <span class="lang-en">Tech project management</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Metodologías ágiles (SCRUM)</span>
+                    <span class="lang-en">Agile methodologies (SCRUM)</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Resolución de problemas</span>
+                    <span class="lang-en">Analytical problem solving</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Testing y aseguramiento de calidad</span>
+                    <span class="lang-en">Testing & quality assurance</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Seguridad informática</span>
+                    <span class="lang-en">Cyber & information security</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Trabajo en equipo</span>
+                    <span class="lang-en">Collaborative teamwork</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Mejora continua</span>
+                    <span class="lang-en">Continuous improvement</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Documentación técnica</span>
+                    <span class="lang-en">Technical documentation</span>
+                </div>
+
+                <div class="capability-hud-badge">
+                    <span class="capability-bullet"></span>
+                    <span class="lang-es">Soporte técnico empresarial</span>
+                    <span class="lang-en">Enterprise technical support</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. EDUCACIÓN / EDUCATION
+         ========================================================================== -->
+    <section class="education-sec" id="education">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag">
+                    <span class="lang-es">Acreditación Académica</span>
+                    <span class="lang-en">Academic Degree</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-es">Educación</span>
+                    <span class="lang-en">Education</span>
+                </h2>
+            </div>
+
+            <div class="edu-wrapper">
+                <div class="edu-hud-card glass-card glow-border-accent" data-tilt data-tilt-max="5">
+                    <div class="edu-icon-shield">
+                        <i data-lucide="graduation-cap" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <div>
+                        <h3 class="edu-degree">
+                            <span class="lang-es">Licenciatura en Ciencias de la Computación</span>
+                            <span class="lang-en">B.S. in Computer Science</span>
+                        </h3>
+                        <div class="edu-school">UNAN Managua</div>
+                        <p class="edu-desc">
+                            <span class="lang-es">Formación teórica y metodológica de alto nivel en algoritmos avanzados, análisis de complejidad, modelado de bases de datos estructuradas, diseño de redes de comunicación y compiladores complejos.</span>
+                            <span class="lang-en">High-level theoretical and methodological foundation in advanced algorithms, computational complexity, relational schema structures, networking, and compiler engineering.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. CERTIFICACIONES / CERTIFICATIONS
+         ========================================================================== -->
+    <section class="certs-sec" id="certs">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag">
+                    <span class="lang-es">Educación Continua</span>
+                    <span class="lang-en">Continuous Study</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-es">Certificaciones y Cursos</span>
+                    <span class="lang-en">Certifications & Credentials</span>
+                </h2>
+            </div>
+
+            <div class="certifications-grid">
+                
+                <!-- Cert 1 -->
+                <div class="certifications-hud-card glass-card" data-tilt data-tilt-max="10">
+                    <div>
+                        <div class="certifications-icon"><i data-lucide="wallet"></i></div>
+                        <h3 class="certifications-title">
+                            <span class="lang-es">Desarrollador Web con PayPal</span>
+                            <span class="lang-en">Web Developer with PayPal</span>
+                        </h3>
+                    </div>
+                    <span class="certifications-authority">Verified Credentials</span>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="certifications-hud-card glass-card" data-tilt data-tilt-max="10">
+                    <div>
+                        <div class="certifications-icon"><i data-lucide="shield-check"></i></div>
+                        <h3 class="certifications-title">
+                            <span class="lang-es">Seguridad Informática</span>
+                            <span class="lang-en">Cyber Security</span>
+                        </h3>
+                    </div>
+                    <span class="certifications-authority">Verified Credentials</span>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="certifications-hud-card glass-card" data-tilt data-tilt-max="10">
+                    <div>
+                        <div class="certifications-icon"><i data-lucide="coffee"></i></div>
+                        <h3 class="certifications-title">
+                            <span class="lang-es">Java: Buenas Prácticas</span>
+                            <span class="lang-en">Java: Best Practices</span>
+                        </h3>
+                    </div>
+                    <span class="certifications-authority">Verified Credentials</span>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="certifications-hud-card glass-card" data-tilt data-tilt-max="10">
+                    <div>
+                        <div class="certifications-icon"><i data-lucide="award"></i></div>
+                        <h3 class="certifications-title">
+                            <span class="lang-es">Java Avanzado</span>
+                            <span class="lang-en">Advanced Java</span>
+                        </h3>
+                    </div>
+                    <span class="certifications-authority">Verified Credentials</span>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="certifications-hud-card glass-card" data-tilt data-tilt-max="10">
+                    <div>
+                        <div class="certifications-icon"><i data-lucide="file-code"></i></div>
+                        <h3 class="certifications-title">
+                            <span class="lang-es">Programación en Python</span>
+                            <span class="lang-en">Python Programming</span>
+                        </h3>
+                    </div>
+                    <span class="certifications-authority">Verified Credentials</span>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="certifications-hud-card glass-card" data-tilt data-tilt-max="10">
+                    <div>
+                        <div class="certifications-icon"><i data-lucide="smartphone"></i></div>
+                        <h3 class="certifications-title">
+                            <span class="lang-es">React Native Móvil</span>
+                            <span class="lang-en">React Native Mobile</span>
+                        </h3>
+                    </div>
+                    <span class="certifications-authority">Verified Credentials</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. IDIOMAS / LANGUAGES
+         ========================================================================== -->
+    <section class="languages-sec" id="languages">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag">
+                    <span class="lang-es">Fluidez Global</span>
+                    <span class="lang-en">Global Fluency</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-es">Idiomas</span>
+                    <span class="lang-en">Languages</span>
+                </h2>
+            </div>
+
+            <div class="languages-wrapper">
+                
+                <!-- Spanish circular gauge -->
+                <div class="languages-hud-card glass-card">
+                    <div class="languages-circle-hud">
+                        <svg class="languages-svg">
+                            <circle cx="62" cy="62" r="54" class="languages-svg-bg"/>
+                            <circle cx="62" cy="62" r="54" class="languages-svg-fill" data-offset="0"/>
+                        </svg>
+                        <span class="languages-gauge-pct">100%</span>
+                    </div>
+                    <h3 class="languages-name">Español</h3>
+                    <span class="languages-proficiency">
+                        <span class="lang-es">Nativo / Lengua Materna</span>
+                        <span class="lang-en">Native Language</span>
+                    </span>
+                </div>
+
+                <!-- English circular gauge -->
+                <div class="languages-hud-card glass-card">
+                    <div class="languages-circle-hud">
+                        <svg class="languages-svg">
+                            <circle cx="62" cy="62" r="54" class="languages-svg-bg"/>
+                            <circle cx="62" cy="62" r="54" class="languages-svg-fill" data-offset="118.75"/> <!-- 339.29 * (1 - 0.65) -->
+                        </svg>
+                        <span class="languages-gauge-pct">65%</span>
+                    </div>
+                    <h3 class="languages-name">Inglés</h3>
+                    <span class="languages-proficiency">
+                        <span class="lang-es">Intermedio B2 / Técnico IT</span>
+                        <span class="lang-en">Intermediate B2 / Technical IT</span>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. CONTACTO & FORMULARIO
+         ========================================================================== -->
+    <section class="contact-sec" id="contact">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag">
+                    <span class="lang-es">Hablemos Hoy</span>
+                    <span class="lang-en">Inquire Now</span>
+                </span>
+                <h2 class="section-title">
+                    <span class="lang-es">Información de Contacto</span>
+                    <span class="lang-en">Contact Information</span>
+                </h2>
+            </div>
+
+            <div class="contact-wrapper-grid">
+                
+                <!-- Information coordinates Panel -->
+                <div class="contact-hud-info glass-card">
+                    <div class="contact-hud-headline">
+                        <h3>
+                            <span class="lang-es">¿Quieres impulsar un proyecto de alto nivel?</span>
+                            <span class="lang-en">Looking for high-availability systems scaling?</span>
+                        </h3>
+                        <p>
+                            <span class="lang-es">Disponible para liderar arquitectura transaccional, administración experta DBA y asesoramiento estratégico en backend Java o PHP empresarial.</span>
+                            <span class="lang-en">Available for transactional backend architecture, expert database orchestration, and strategic consultation for mid-to-large corporate projects.</span>
+                        </p>
+                    </div>
+
+                    <div class="contact-hud-coordinates">
+                        
+                        <!-- Email item with copy trigger -->
+                        <div class="contact-coordinate-item">
+                            <div class="contact-icon-shell"><i data-lucide="mail"></i></div>
+                            <div class="contact-text-shell">
+                                <span class="contact-label-tag">Email</span>
+                                <div class="contact-label-value" id="email-value">frankball4@yahoo.es</div>
+                            </div>
+                            <button class="contact-copy-action" id="copy-email-btn" aria-label="Copy email address" data-copy="frankball4@yahoo.es">
+                                <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                            </button>
+                        </div>
+
+                        <!-- Phone item with copy trigger -->
+                        <div class="contact-coordinate-item">
+                            <div class="contact-icon-shell"><i data-lucide="phone"></i></div>
+                            <div class="contact-text-shell">
+                                <span class="contact-label-tag">WhatsApp</span>
+                                <div class="contact-label-value" id="phone-value">+505 5888-3346</div>
+                            </div>
+                            <button class="contact-copy-action" id="copy-phone-btn" aria-label="Copy phone number" data-copy="+50558883346">
+                                <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                            </button>
+                        </div>
+
+                        <!-- Location item -->
+                        <div class="contact-coordinate-item">
+                            <div class="contact-icon-shell"><i data-lucide="map-pin"></i></div>
+                            <div class="contact-text-shell">
+                                <span class="contact-label-tag">
+                                    <span class="lang-es">Ubicación</span>
+                                    <span class="lang-en">Location</span>
+                                </span>
+                                <div class="contact-label-value" style="font-size:0.85rem;">Km. 16.2 carretera a Ticuantepe, Managua, Nicaragua</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Social Network button badges -->
+                    <div class="contact-socials-hud">
+                        <a href="https://github.com" target="_blank" class="contact-social-btn" aria-label="GitHub"><i data-lucide="github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="contact-social-btn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="contact-social-btn" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Form Panel connected via REST to FormSubmit -->
+                <div class="contact-hud-form-panel glass-card">
+                    <form class="contact-hud-form" id="contact-form" novalidate>
+                        
+                        <div class="form-hud-group">
+                            <input type="text" id="form-name" class="form-hud-input" placeholder=" " required>
+                            <label for="form-name" class="form-hud-label">
+                                <span class="lang-es">Nombre Completo</span>
+                                <span class="lang-en">Full Name</span>
+                            </label>
+                        </div>
+
+                        <div class="form-hud-group">
+                            <input type="email" id="form-email" class="form-hud-input" placeholder=" " required>
+                            <label for="form-email" class="form-hud-label">
+                                <span class="lang-es">Correo Electrónico</span>
+                                <span class="lang-en">Email Address</span>
+                            </label>
+                        </div>
+
+                        <div class="form-hud-group">
+                            <input type="text" id="form-subject" class="form-hud-input" placeholder=" " required>
+                            <label for="form-subject" class="form-hud-label">
+                                <span class="lang-es">Asunto</span>
+                                <span class="lang-en">Subject</span>
+                            </label>
+                        </div>
+
+                        <div class="form-hud-group">
+                            <textarea id="form-message" class="form-hud-input form-hud-textarea" placeholder=" " required></textarea>
+                            <label for="form-message" class="form-hud-label">
+                                <span class="lang-es">Mensaje o Detalles del Proyecto</span>
+                                <span class="lang-en">Message or Project Scope</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="justify-content: center; width: 100%;">
+                            <span class="lang-es">Enviar Mensaje</span>
+                            <span class="lang-en">Send Message</span>
+                            <i data-lucide="send" class="btn-icon"></i>
+                        </button>
+
+                        <!-- Terminal simulated logging outputs -->
+                        <div class="form-hud-terminal-feedback" id="form-output"></div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. FOOTER
+         ========================================================================== -->
+    <footer class="footer-hud">
+        <div class="container">
+            <div class="footer-hud-content">
+                
+                <div class="footer-hud-logo">
+                    F.<span>BALLADARES</span>
+                </div>
+
+                <div class="footer-hud-copy">
+                    &copy; 2026 Franklin Balladares. 
+                    <span class="lang-es">Todos los derechos reservados. Diseñado bajo estándares de ingeniería y UX Premium.</span>
+                    <span class="lang-en">All rights reserved. Designed & Engineered with Premium UX & System Standards.</span>
+                </div>
+
+                <!-- Scroll to Top trigger cap -->
+                <button class="hud-scroll-top-btn" id="scroll-top-trigger" aria-label="Scroll to top">
+                    <i data-lucide="arrow-up" style="width: 18px; height: 18px;"></i>
+                </button>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- DYNAMIC TOAST CONTAINER FOR CLIPPINGS --- -->
+    <div class="toast-hud-container" id="toast-container"></div>
+
+
+    <!-- ==========================================================================
+         LIBRARIES & SCRIPTS VIA CDN
+         ========================================================================== -->
+          
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Typed.js for dynamic typing header -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Vanilla Tilt for 3D Cards interactive mouse moves -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <!-- Lucide Icons Vector Renderer -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Main JavaScript App Controller -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
