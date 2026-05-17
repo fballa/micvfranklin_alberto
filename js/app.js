@@ -620,11 +620,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            const step1 = currentLang === 'en' ? 'Establishing secure HTTPS sync link with FormSubmit SMTP relays...' : 'Iniciando enlace HTTPS seguro con la pasarela smtp.formsubmit.co...';
+            const step1 = currentLang === 'en' ? 'Establishing secure HTTPS sync link with Brevo REST gateway...' : 'Iniciando enlace HTTPS seguro con la pasarela smtp.brevo.api...';
             const step2 = currentLang === 'en' ? 'Ciphers online (SSL/TLS - AES-256 bits). Transmitting packet...' : 'Cifrando paquete transaccional (SSL/TLS - AES-256)...';
-            const successMsg = currentLang === 'en' ? 
-                `[TRANSMISSION SUCCESS] Hello ${name}, your email has been safely routed to frankball4@yahoo.es. (Note: If this is the first submission, check your inbox for FormSubmit's verification message).` :
-                `[MENSAJE ENVIADO] ¡Éxito! Hola ${name}, tu mensaje ha sido enviado directamente al correo frankball4@yahoo.es. (Nota: Si es el primer envío, recuerda verificar tu buzón para confirmar la activación inicial de FormSubmit).`;
 
             // Display dynamic visual boot logger steps
             showTerminalFeedback(step1, 'var(--accent-cyan)');
@@ -632,31 +629,38 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 showTerminalFeedback(step2, 'var(--accent-purple)');
                 
-                // POST AJAX request directly to FormSubmit REST gateway
-                fetch("https://formsubmit.co/ajax/frankball4@yahoo.es", {
+                // Group all details as requested as a single structured message string
+                const groupedMessage = `Nombre: ${name}\nEmail Remitente: ${email}\nAsunto del Remitente: ${subject}\nMensaje:\n${message}`;
+
+                // POST AJAX request directly to Brevo custom REST gateway
+                fetch("https://misdemos.x10.mx/apichat/apibrevo.php", {
                     method: "POST",
                     headers: { 
-                        "Content-Type": "application/json",
-                        "Accept": "application/json"
+                        "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        _subject: `[Portfolio CV Contact] ${subject}`,
-                        message: message
+                        email: "frankball4@yahoo.es",
+                        mensaje: groupedMessage,
+                        asunto: `contacto de sitio web personal - ${name}`
                     })
                 })
                 .then(res => res.json())
                 .then(data => {
-                    if (data.success === "true" || data.success === true) {
-                        showTerminalFeedback(successMsg, 'var(--accent-green)');
+                    // Check if array response contains Brevo confirmation message
+                    if (data && data[0] && data[0].data && data[0].data.includes("correctamente")) {
+                        const feedbackText = currentLang === 'en' ? 
+                            `[TRANSMISSION SUCCESS] Hello ${name}, your email was successfully routed via Brevo: ${data[0].data}` :
+                            `[MENSAJE ENVIADO] ¡Éxito! Hola ${name}, tu mensaje se envió mediante la pasarela Brevo: ${data[0].data}`;
+                        
+                        showTerminalFeedback(feedbackText, 'var(--accent-green)');
                         contactForm.reset();
                     } else {
-                        showTerminalFeedback(`ERROR: ${data.message || 'Transmission failed.'}`, '#ff5f56');
+                        const errMsg = (data && data[0] && data[0].data) ? data[0].data : 'Transmission failed.';
+                        showTerminalFeedback(`ERROR: ${errMsg}`, '#ff5f56');
                     }
                 })
                 .catch(err => {
-                    showTerminalFeedback(currentLang === 'en' ? 'ERROR: Connection timeout. Verify your internet status.' : 'ERROR: Fallo de conexión. Verifica tu conexión de red.', '#ff5f56');
+                    showTerminalFeedback(currentLang === 'en' ? 'ERROR: Connection timeout or CORS restriction on API.' : 'ERROR: Fallo de conexión o restricción CORS en la API.', '#ff5f56');
                     console.error('Mail submit error: ', err);
                 });
                 
